@@ -11,3 +11,5 @@ Laravel: v12
 Node: 22
 Package Manager: pnpm
 
+# MySql
+CREATE SCHEMA financial_records;
