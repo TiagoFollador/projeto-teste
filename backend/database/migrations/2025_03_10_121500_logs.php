@@ -16,6 +16,7 @@ return new class extends Migration
     {
         Schema::create('logs', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained();
             $table->tinyInteger('month');
             $table->boolean('is_deposit');
             $table->decimal('amount', 8, 2);
