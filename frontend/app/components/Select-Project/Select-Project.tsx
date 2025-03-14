@@ -10,12 +10,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
+import type Project from "~/types/Project";
 
-interface Project {
-  id: number;
-  name: string;
-  description: string;
-}
 
 interface SelectProjectProps {
   projectArray: Project[];
@@ -26,14 +22,25 @@ const SelectProject = ({projectArray}: SelectProjectProps) => {
     projectArray[0]
   );
 
+  const handleOnChange = (id: string) => {
+    const projectFind = projectArray.find(
+      (project) => project.id === Number(id)
+    );
+
+    if (projectFind) {
+      setCurrentProject(projectFind);
+    }
+  } 
+
   return (
-    <Select>
+    <Select onValueChange={(id) => handleOnChange(id)
+    }>
       <SelectTrigger className="w-[180px]">
         <SelectValue placeholder="Selecione um projeto" />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectLabel>{currentProject.name}</SelectLabel>
+          <SelectLabel>Projetos</SelectLabel>
 
           {projectArray.map((project) => {
             return <SelectItem value={String(project.id)}>{project.name}</SelectItem>;
