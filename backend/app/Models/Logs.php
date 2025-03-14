@@ -26,4 +26,7 @@ class Logs extends Model
     {
          return $this->belongsTo(Users::class, 'user_id');
     }
+
+
+    public function store(Request)
 }

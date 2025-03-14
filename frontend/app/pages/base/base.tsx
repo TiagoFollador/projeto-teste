@@ -1,13 +1,13 @@
 "use client";
 
-import FooterNavBar from "~/components/footer-nav-bar";
-import TopNavBar from "~/components/top-nav-bar";
+import FooterNavBar from "~/components/Footer-nav-bar/footer-nav-bar";
+import TopNavBar from "~/components/Top-nav-bar/top-nav-bar";
 
 export default function Base({ children }: {children: React.ReactNode}) {
     return (
         <div>
             <TopNavBar/>
-            <main>
+            <main className="h-[80vh]">
                 {children}
             </main>
             <FooterNavBar/>

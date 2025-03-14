@@ -1,7 +1,5 @@
-"use client";
 
-import { ModeToggle } from "./mode-toggle";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 
 export default function FooterNavBar() {

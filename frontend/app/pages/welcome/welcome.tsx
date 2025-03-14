@@ -1,4 +1,4 @@
-import { ModeToggle } from "~/components/mode-toggle";
+import { ModeToggle } from "~/components/Mode-toggle/mode-toggle";
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
 
